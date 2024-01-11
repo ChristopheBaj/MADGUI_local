@@ -159,7 +159,8 @@ if choice == 'Main Page':
 		st.write('Columns with a standard deviation of 0 are already deselected, as well as columns that contain text. This is done automatically to eliminate columns that do not provide useful information for analysis and prediction.')
 
 		# Select the columns where the standard deviation is different than 0
-		test = np.std(st.session_state['data_file'])
+		numeric_cols = st.session_state['data_file'].select_dtypes(['number'])
+		test = np.std(numeric_cols)
 		list_column = np.where(test!=0)
 		test2=[]
 		for i in list_column:
