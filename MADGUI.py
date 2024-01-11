@@ -1,9 +1,6 @@
 # To run this file tap: ' streamlit run MADGUI.py  ' in the terminal while being in the repertory of this file.
 # The recessary librairy are :
 
-import sys
-sys.path.insert(0, './packages.zip')
-
 import streamlit as st
 from streamlit_option_menu import option_menu
 import pandas as pd
